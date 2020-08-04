@@ -22,6 +22,9 @@ class Register extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    if (nextProps.auth.isAuthenticated) {
+      this.props.history.push("/dashboard"); // push user to dashboard when they login
+    }
     if (nextProps.errors) {
       this.setState({
         errors: nextProps.errors,

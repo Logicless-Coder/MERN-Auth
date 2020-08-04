@@ -45,6 +45,7 @@ class Login extends Component {
       password: this.state.password,
     };
 
+    console.log("Logged in successfully");
     this.props.loginUser(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
   };
 
